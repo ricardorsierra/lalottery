@@ -1,30 +1,23 @@
-#lottery#
+## Introduction
 
-基于Laravel4.2的H5抽奖程序，包括刮刮卡和砸蛋两种形式。**UI请自行设计，本项目ui仅供参考**
+Lalottery provides a lottery system with dashboard and code-driven configuration for your Laravel. 
 
-请根据composer安装依赖包
+## Installation
 
-##功能##
+> **Note:** Lalottery is currently in beta.
 
+Lalottery requires Laravel 5.4, which is currently in beta, and PHP 7.1+. You may use Composer to install Lalottery into your Laravel project:
 
-		1.刮刮卡/砸蛋UI
-		2.设定奖品
-		3.设定限额
-		4.设定各奖品中奖率
-		5.中奖结果统计
+    composer require ricardorsierra/lalottery
 
-##关于超卖问题##
+After installing Lalottery, publish its assets using the `vendor:publish` Artisan command:
 
-目前的事务还不是非常严谨，请等待更新。如有好的建议，请一定pr指导一下，非常感谢！
+    php artisan vendor:publish --provider="Ricardorsierra\Lalottery\LalotteryServiceProvider"
 
-##感谢##
+## Configuration
 
-		larave
-		adminLTE
-		刮刮卡和砸蛋的js作者
+After publishing Lalottery's assets, its primary configuration file will be located at `config/lalottery.php`.
 
-##Extra##
-请来qq群讨论：533838427
+### Web Dashboard Authentication
 
-##License##
-MIT
+Lalottery exposes a dashboard at `/lalottery`.
